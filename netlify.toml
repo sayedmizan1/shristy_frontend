@@ -3,13 +3,13 @@
 
 [[redirects]]
   from = "/api/*"
-  to = "https://REPLACE_WITH_YOUR_RENDER_HOST/api/:splat"
+  to = "https://shristy-backend.onrender.com/api/:splat"
   status = 200
   force = true
 
 [[redirects]]
   from = "/media/*"
-  to = "https://REPLACE_WITH_YOUR_RENDER_HOST/media/:splat"
+  to = "https://shristy-backend.onrender.com/media/:splat"
   status = 200
   force = true
 
