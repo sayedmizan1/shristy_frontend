@@ -207,15 +207,20 @@ function renderStorefront() {
         <!-- 1. HERO -->
         <section class="so-hero">
           <div class="so-hero-content so-animate">
-            <div class="so-hero-eyebrow"><span></span>100% Natural • Authentic Ayurvedic<span></span></div>
-            <h1>Bring the Goodness of Nature to Your Everyday Care</h1>
-            <p>Natural & herbal products made with carefully selected botanical ingredients, inspired by traditional Indian wellness.</p>
+            <div class="so-hero-eyebrow"><span class="dot"></span> 100% Natural &nbsp;•&nbsp; Authentic Ayurvedic &nbsp;•&nbsp; Handmade</div>
+            <h1>Bring the <em>Goodness of Nature</em> to Your Everyday Care</h1>
+            <p>Natural & herbal products made with carefully selected botanical ingredients, inspired by the richness of traditional Indian wellness.</p>
             <div class="so-hero-buttons">
-              <a href="#shop" class="so-btn so-btn-primary">Shop Now</a>
-              <a href="#collections" class="so-btn so-btn-secondary">Explore Collection</a>
+              <a href="#shop" class="so-btn so-btn-primary">🛍️ Shop Now</a>
+              <a href="#collections" class="so-btn so-btn-secondary">🌿 Explore Collection</a>
+            </div>
+            <div class="so-hero-stats">
+              <div><div class="so-hero-stat-num">100%</div><div class="so-hero-stat-label">Natural Ingredients</div></div>
+              <div><div class="so-hero-stat-num">Small</div><div class="so-hero-stat-label">Batch Crafted</div></div>
+              <div><div class="so-hero-stat-num">❤️</div><div class="so-hero-stat-label">Made with Love</div></div>
             </div>
           </div>
-          <div class="so-hero-media so-animate">
+          <div class="so-hero-media so-animate so-animate-delay-1">
             <img src="/assets/hero.jpg" alt="Shrishti Organic Products" />
           </div>
           <div class="so-hero-trust">
@@ -228,12 +233,12 @@ function renderStorefront() {
               Handmade with Care
             </div>
             <div class="so-trust-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
               Nature Inspired
             </div>
             <div class="so-trust-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-              Small Batch
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+              Small Batch Quality
             </div>
           </div>
         </section>
