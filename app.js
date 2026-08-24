@@ -397,13 +397,16 @@ function renderStorefront() {
 
         <!-- 8. FEATURED COLLECTION -->
         <section class="so-featured-banner">
-          <div class="so-featured-content">
-            <p style="text-transform: uppercase; letter-spacing: 0.1em; font-size: 12px; margin-bottom: 10px; color: var(--sun);">Explore Our Herbal Collection</p>
+          <div class="so-featured-text">
+            <span class="eyebrow" style="color: var(--sun);">Explore Our Herbal Collection</span>
             <h2>Traditional Herbal Goodness for Modern Everyday Care</h2>
-            <div style="display: flex; justify-content: center; gap: 15px;">
+            <div style="display: flex; gap: 15px;">
               <a href="#shop" class="so-btn so-btn-light">Shop Skin Care</a>
               <a href="#shop" class="so-btn so-btn-light">Shop Hair Care</a>
             </div>
+          </div>
+          <div class="so-featured-image">
+            <img src="/assets/WhatsApp%20Image%202026-08-24%20at%2020.18.46.jpeg" alt="Featured Collection" />
           </div>
         </section>
 
