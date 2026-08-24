@@ -222,30 +222,44 @@
 .so-story-split {
   display: flex;
   flex-wrap: wrap;
-  gap: 50px;
+  gap: 60px;
   align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 .so-story-img {
-  flex: 1 1 400px;
-  aspect-ratio: 4/3;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: var(--shadow);
+  flex: 1 1 450px;
+  width: 100%;
+  object-fit: contain; /* Changed to contain to avoid cropping text-heavy images */
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.06);
 }
 .so-story-text {
-  flex: 1 1 400px;
+  flex: 1 1 450px;
+  padding: 20px 0;
+}
+.so-story-text .eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--sun);
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  display: block;
 }
 .so-story-text h2 {
   font-family: var(--serif);
   color: var(--forest);
-  font-size: 32px;
-  margin-bottom: 20px;
+  font-size: clamp(32px, 4vw, 42px);
+  margin-bottom: 25px;
+  line-height: 1.2;
 }
 .so-story-text p {
   color: var(--ink);
   font-size: 16px;
   margin-bottom: 20px;
-  line-height: 1.6;
+  line-height: 1.7;
+  opacity: 0.9;
 }
 
 /* 7. HERBAL RITUAL */

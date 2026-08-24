@@ -356,11 +356,11 @@ function renderStorefront() {
         </section>
 
         <!-- 6. BRAND STORY -->
-        <section class="so-section" id="our-story">
+        <section class="so-section" id="our-story" style="background: var(--paper);">
           <div class="so-story-split">
-            <img class="so-story-img" src="/assets/WhatsApp%20Image%202026-08-24%20at%2020.18.46(1).jpeg" alt="Making process" />
+            <img class="so-story-img" src="/assets/admin-hero.jpg" alt="Making process" />
             <div class="so-story-text">
-              <p style="text-transform: uppercase; letter-spacing: 0.1em; color: var(--sun); font-size: 12px; margin-bottom: 10px;">From Nature to Your Home</p>
+              <span class="eyebrow">From Nature to Your Home</span>
               <h2>"We believe beauty begins with nature."</h2>
               <p>Shrishti Organic is a homegrown natural care brand inspired by the traditional goodness of Indian herbs and botanical ingredients.</p>
               <p>From herbal soaps and face care to hair care and natural powders, every product is created with care to bring the simple goodness of nature into your daily routine.</p>
