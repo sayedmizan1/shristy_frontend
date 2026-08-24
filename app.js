@@ -202,314 +202,219 @@ function renderStorefront() {
           </button>
         </div>
       </header>
-
       <main id="main-content">
-        <!-- 1. HERO SECTION -->
+
+        <!-- 1. HERO -->
         <section class="so-hero">
-          <div class="so-hero-overlay"></div>
-          <div class="so-hero-content">
+          <div class="so-hero-content so-animate">
+            <div class="so-hero-eyebrow"><span></span>100% Natural • Authentic Ayurvedic<span></span></div>
             <h1>Bring the Goodness of Nature to Your Everyday Care</h1>
             <p>Natural & herbal products made with carefully selected botanical ingredients, inspired by traditional Indian wellness.</p>
-            <div style="display: flex; justify-content: center; gap: 15px;">
-              <a href="#shop" class="so-btn so-btn-primary">🛍️ Shop Now</a>
-              <a href="#collections" class="so-btn so-btn-secondary">🌿 Explore Our Collection</a>
+            <div class="so-hero-buttons">
+              <a href="#shop" class="so-btn so-btn-primary">Shop Now</a>
+              <a href="#collections" class="so-btn so-btn-secondary">Explore Collection</a>
             </div>
           </div>
+          <div class="so-hero-media so-animate">
+            <img src="/assets/hero.jpg" alt="Shrishti Organic Products" />
+          </div>
           <div class="so-hero-trust">
-            <span>🌿 Herbal Ingredients</span>
-            <span>🤲 Handmade with Care</span>
-            <span>💚 Nature Inspired</span>
-            <span>✨ Small Batch</span>
+            <div class="so-trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L9.09 8.26L2 9.27L7 14.14L5.82 21.02L12 17.77L18.18 21.02L17 14.14L22 9.27L14.91 8.26L12 2Z"/></svg>
+              Herbal Ingredients
+            </div>
+            <div class="so-trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 010 8h-1M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8zM6 1v3M10 1v3M14 1v3"/></svg>
+              Handmade with Care
+            </div>
+            <div class="so-trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              Nature Inspired
+            </div>
+            <div class="so-trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+              Small Batch
+            </div>
           </div>
         </section>
 
         <!-- 2. SHOP BY CATEGORY -->
-        <section class="so-section" id="collections">
-          <div class="so-section-header">
+        <section class='so-section' id='collections' style='background:#fff;'>
+          <div class='so-section-header'>
+            <span class='so-section-kicker'>Shop by Category</span>
             <h2>Discover Your Natural Care</h2>
-            <p>Shop by Category</p>
+            <div class='so-divider'></div>
           </div>
-          <div class="so-category-grid">
-            <div class="so-category-card">
-              <h3>Herbal Soaps</h3>
-              <p>Gentle everyday cleansing with botanical ingredients.</p>
-            </div>
-            <div class="so-category-card">
-              <h3>Face & Skin Care</h3>
-              <p>Natural powders, face washes, masks & scrubs.</p>
-            </div>
-            <div class="so-category-card">
-              <h3>Hair Care</h3>
-              <p>Herbal powders, oils & natural hair care essentials.</p>
-            </div>
-            <div class="so-category-card">
-              <h3>Herbal Powders</h3>
-              <p>Traditional herbs for your daily beauty rituals.</p>
-            </div>
-            <div class="so-category-card">
-              <h3>Body Care</h3>
-              <p>Natural care for a refreshing bathing experience.</p>
-            </div>
-            <div class="so-category-card">
-              <h3>Natural Candles</h3>
-              <p>Handcrafted candles for a warm & beautiful ambience.</p>
-            </div>
+          <div class='so-category-grid'>
+            <div class='so-category-card'><div class='so-category-card-icon'>🧼</div><h3>Herbal Soaps</h3><p>Gentle everyday cleansing with botanical ingredients.</p></div>
+            <div class='so-category-card'><div class='so-category-card-icon'>🌸</div><h3>Face &amp; Skin Care</h3><p>Natural powders, face washes, masks &amp; scrubs.</p></div>
+            <div class='so-category-card'><div class='so-category-card-icon'>🍃</div><h3>Hair Care</h3><p>Herbal powders, oils &amp; natural hair care essentials.</p></div>
+            <div class='so-category-card'><div class='so-category-card-icon'>🌱</div><h3>Herbal Powders</h3><p>Traditional herbs for your daily beauty rituals.</p></div>
+            <div class='so-category-card'><div class='so-category-card-icon'>🛁</div><h3>Body Care</h3><p>Natural care for a refreshing bathing experience.</p></div>
+            <div class='so-category-card'><div class='so-category-card-icon'>🕯️</div><h3>Natural Candles</h3><p>Handcrafted candles for a warm &amp; beautiful ambience.</p></div>
           </div>
-          <div class="so-btn-container">
-            <a href="#shop" class="so-btn so-btn-primary">View All Products</a>
-          </div>
+          <div class='so-btn-container'><a href='#shop' class='so-btn so-btn-primary'>View All Products</a></div>
         </section>
 
-        <!-- 3. BEST SELLERS (dynamic catalog) -->
-        <section class="so-section" id="shop">
-          <div class="so-section-header">
+        <!-- 3. BEST SELLERS -->
+        <section class='so-section' id='shop'>
+          <div class='so-section-header'>
+            <span class='so-section-kicker'>Best Sellers</span>
             <h2>Loved by Our Customers ❤️</h2>
-            <p>Best Sellers</p>
+            <div class='so-divider'></div>
           </div>
           ${products.length ? `<div class="so-bestsellers-grid">${products.slice(0, 4).map(renderProductCard).join("")}</div>` : renderPublicEmptyState()}
         </section>
 
         <!-- 4. OUR NATURAL INGREDIENTS -->
-        <section class="so-section">
-          <div class="so-section-header">
-            <h2>Nature's Finest Ingredients 🌿</h2>
-            <p>Inspired by Nature. Rooted in Tradition.</p>
+        <section class='so-section' style='background:var(--linen);'>
+          <div class='so-section-header'>
+            <span class='so-section-kicker'>Our Natural Ingredients</span>
+            <h2>Inspired by Nature. Rooted in Tradition.</h2>
+            <div class='so-divider'></div>
           </div>
-          <div class="so-ingredient-grid">
-            <div class="so-ingredient">
-              <img src="/assets/WhatsApp%20Image%202026-08-24%20at%2020.18.46(1).jpeg" alt="Manjishtha" />
-              <span>Manjishtha</span>
-            </div>
-            <div class="so-ingredient">
-              <img src="/assets/WhatsApp%20Image%202026-08-24%20at%2020.18.46.jpeg" alt="Mulethi" />
-              <span>Mulethi</span>
-            </div>
-            <div class="so-ingredient">
-              <img src="/assets/WhatsApp%20Image%202026-08-24%20at%2020.18.48(1).jpeg" alt="Neem" />
-              <span>Neem</span>
-            </div>
-            <div class="so-ingredient">
-              <img src="/assets/WhatsApp%20Image%202026-08-24%20at%2020.18.48.jpeg" alt="Amla" />
-              <span>Amla</span>
-            </div>
-            <div class="so-ingredient">
-              <img src="/assets/WhatsApp%20Image%202026-08-24%20at%2020.18.50.jpeg" alt="Shikakai" />
-              <span>Shikakai</span>
-            </div>
-            <div class="so-ingredient">
-              <img src="/assets/WhatsApp%20Image%202026-08-24%20at%2020.18.51.jpeg" alt="Hibiscus" />
-              <span>Hibiscus</span>
-            </div>
-            <div class="so-ingredient">
-              <img src="/assets/WhatsApp%20Image%202026-08-24%20at%2020.18.53.jpeg" alt="Moringa" />
-              <span>Moringa</span>
-            </div>
-            <div class="so-ingredient">
-              <img src="/assets/WhatsApp%20Image%202026-08-24%20at%2020.52.09.jpeg" alt="Orange Peel" />
-              <span>Orange Peel</span>
-            </div>
-            <div class="so-ingredient">
-              <img src="/assets/admin-hero.jpg" alt="Sandalwood" />
-              <span>Sandalwood</span>
-            </div>
+          <div class='so-ingredient-grid'>
+            <div class='so-ingredient'><img src='/assets/WhatsApp%20Image%202026-08-24%20at%2020.18.46(1).jpeg' alt='Manjishtha' /><span>Manjishtha</span></div>
+            <div class='so-ingredient'><img src='/assets/WhatsApp%20Image%202026-08-24%20at%2020.18.46.jpeg' alt='Mulethi' /><span>Mulethi</span></div>
+            <div class='so-ingredient'><img src='/assets/WhatsApp%20Image%202026-08-24%20at%2020.18.48(1).jpeg' alt='Neem' /><span>Neem</span></div>
+            <div class='so-ingredient'><img src='/assets/WhatsApp%20Image%202026-08-24%20at%2020.18.48.jpeg' alt='Amla' /><span>Amla</span></div>
+            <div class='so-ingredient'><img src='/assets/WhatsApp%20Image%202026-08-24%20at%2020.18.50.jpeg' alt='Shikakai' /><span>Shikakai</span></div>
+            <div class='so-ingredient'><img src='/assets/WhatsApp%20Image%202026-08-24%20at%2020.18.51.jpeg' alt='Hibiscus' /><span>Hibiscus</span></div>
+            <div class='so-ingredient'><img src='/assets/WhatsApp%20Image%202026-08-24%20at%2020.18.53.jpeg' alt='Moringa' /><span>Moringa</span></div>
+            <div class='so-ingredient'><img src='/assets/WhatsApp%20Image%202026-08-24%20at%2020.52.09.jpeg' alt='Orange Peel' /><span>Orange Peel</span></div>
+            <div class='so-ingredient'><img src='/assets/hero.jpg' alt='Sandalwood' /><span>Sandalwood</span></div>
+            <div class='so-ingredient'><img src='/assets/admin-hero.jpg' alt='Tulsi' /><span>Tulsi</span></div>
           </div>
-          <div style="max-width: 800px; margin: 0 auto; text-align: center; color: var(--ink);">
-            <p>At Shrishti Organic, we believe that everyday personal care can be simple, thoughtful and closer to nature. We carefully select herbal and botanical ingredients for our products and prepare them with care.</p>
-            <div class="so-btn-container">
-              <a href="#shop" class="so-btn so-btn-secondary">Explore Ingredients</a>
-            </div>
+          <div class='so-ingredients-copy'>
+            <p>At Shrishti Organic, we believe everyday personal care can be simple, thoughtful and closer to nature.</p>
+            <div class='so-btn-container'><a href='#shop' class='so-btn so-btn-secondary'>Explore Ingredients</a></div>
           </div>
         </section>
 
-        <!-- 5. WHY SHRISHTI ORGANIC? -->
-        <section class="so-section" style="background: var(--linen);">
-          <div class="so-section-header">
+        <!-- 5. WHY US -->
+        <section class='so-section' id='why-us'>
+          <div class='so-section-header'>
+            <span class='so-section-kicker'>Why Choose Us</span>
             <h2>Why Choose Shrishti Organic?</h2>
+            <div class='so-divider'></div>
           </div>
-          <div class="so-features-grid">
-            <div class="so-feature">
-              <div class="so-feature-icon">🌿</div>
-              <h3>Herbal Ingredients</h3>
-              <p>Carefully selected botanical ingredients.</p>
-            </div>
-            <div class="so-feature">
-              <div class="so-feature-icon">🤲</div>
-              <h3>Handcrafted with Care</h3>
-              <p>Made with attention to every batch.</p>
-            </div>
-            <div class="so-feature">
-              <div class="so-feature-icon">🌱</div>
-              <h3>Nature Inspired</h3>
-              <p>Inspired by traditional Indian herbal beauty rituals.</p>
-            </div>
-            <div class="so-feature">
-              <div class="so-feature-icon">🔍</div>
-              <h3>Thoughtfully Made</h3>
-              <p>Simple, transparent and carefully prepared products.</p>
-            </div>
-            <div class="so-feature">
-              <div class="so-feature-icon">❤️</div>
-              <h3>Made with Love</h3>
-              <p>Created for everyday self-care and family wellness.</p>
-            </div>
+          <div class='so-features-grid'>
+            <div class='so-feature'><div class='so-feature-icon'>🌿</div><h3>Herbal Ingredients</h3><p>Carefully selected botanical ingredients.</p></div>
+            <div class='so-feature'><div class='so-feature-icon'>🤲</div><h3>Handcrafted with Care</h3><p>Made with attention to every batch.</p></div>
+            <div class='so-feature'><div class='so-feature-icon'>🌱</div><h3>Nature Inspired</h3><p>Inspired by traditional Indian herbal beauty rituals.</p></div>
+            <div class='so-feature'><div class='so-feature-icon'>🔍</div><h3>Thoughtfully Made</h3><p>Simple, transparent and carefully prepared products.</p></div>
+            <div class='so-feature'><div class='so-feature-icon'>❤️</div><h3>Made with Love</h3><p>Created for everyday self-care and family wellness.</p></div>
           </div>
         </section>
 
         <!-- 6. BRAND STORY -->
-        <section class="so-section" id="our-story" style="background: var(--paper);">
-          <div class="so-story-split">
-            <img class="so-story-img" src="/assets/admin-hero.jpg" alt="Making process" />
-            <div class="so-story-text">
-              <span class="eyebrow">From Nature to Your Home</span>
-              <h2>"We believe beauty begins with nature."</h2>
+        <section class='so-section' id='our-story' style='background:#fdfaf4;'>
+          <div class='so-story-split'>
+            <div class='so-story-img-wrap'>
+              <img class='so-story-img' src='/assets/WhatsApp%20Image%202026-08-24%20at%2020.52.09.jpeg' alt='Shrishti Organic Our Story' />
+            </div>
+            <div class='so-story-text'>
+              <span class='eyebrow'>Our Story</span>
+              <h2>&quot;We believe beauty begins with nature.&quot;</h2>
               <p>Shrishti Organic is a homegrown natural care brand inspired by the traditional goodness of Indian herbs and botanical ingredients.</p>
               <p>From herbal soaps and face care to hair care and natural powders, every product is created with care to bring the simple goodness of nature into your daily routine.</p>
-              <a href="#" class="so-btn so-btn-primary" style="margin-top: 15px;">Our Story</a>
+              <a href='#' class='so-btn so-btn-primary' style='margin-top:10px;'>Know Our Story</a>
             </div>
           </div>
         </section>
 
         <!-- 7. HERBAL RITUAL -->
-        <section class="so-section">
-          <div class="so-section-header">
+        <section class='so-section' style='background:var(--linen);'>
+          <div class='so-section-header'>
+            <span class='so-section-kicker'>Your Herbal Ritual</span>
             <h2>Create Your Everyday Herbal Ritual 🌿</h2>
+            <div class='so-divider'></div>
           </div>
-          <div class="so-ritual-steps">
-            <div class="so-step">
-              <div class="so-step-number">01</div>
-              <h3>CHOOSE</h3>
-              <p>Choose the herbal ingredients your skin & hair love.</p>
-            </div>
-            <div class="so-step-arrow">→</div>
-            <div class="so-step">
-              <div class="so-step-number">02</div>
-              <h3>USE</h3>
-              <p>Make them a simple part of your everyday self-care ritual.</p>
-            </div>
-            <div class="so-step-arrow">→</div>
-            <div class="so-step">
-              <div class="so-step-number">03</div>
-              <h3>ENJOY</h3>
-              <p>Enjoy a naturally inspired, refreshing self-care experience.</p>
-            </div>
+          <div class='so-ritual-steps'>
+            <div class='so-step'><div class='so-step-number'>01</div><h3>CHOOSE</h3><p>Choose the herbal ingredients your skin &amp; hair love.</p></div>
+            <div class='so-step-arrow'>→</div>
+            <div class='so-step'><div class='so-step-number'>02</div><h3>USE</h3><p>Make them a simple part of your everyday self-care ritual.</p></div>
+            <div class='so-step-arrow'>→</div>
+            <div class='so-step'><div class='so-step-number'>03</div><h3>ENJOY</h3><p>Enjoy a naturally inspired, refreshing self-care experience.</p></div>
           </div>
         </section>
 
         <!-- 8. FEATURED COLLECTION -->
-        <section class="so-featured-banner">
-          <div class="so-featured-text">
-            <span class="eyebrow" style="color: var(--sun);">Explore Our Herbal Collection</span>
+        <section class='so-featured-banner'>
+          <div class='so-featured-text'>
+            <span class='eyebrow'>Featured Collection</span>
             <h2>Traditional Herbal Goodness for Modern Everyday Care</h2>
-            <div style="display: flex; gap: 15px;">
-              <a href="#shop" class="so-btn so-btn-light">Shop Skin Care</a>
-              <a href="#shop" class="so-btn so-btn-light">Shop Hair Care</a>
+            <div style='display:flex;gap:16px;flex-wrap:wrap;'>
+              <a href='#shop' class='so-btn so-btn-light'>Shop Skin Care</a>
+              <a href='#shop' class='so-btn so-btn-light'>Shop Hair Care</a>
             </div>
           </div>
-          <div class="so-featured-image">
-            <img src="/assets/WhatsApp%20Image%202026-08-24%20at%2020.18.46.jpeg" alt="Featured Collection" />
+          <div class='so-featured-image'>
+            <img src='/assets/WhatsApp%20Image%202026-08-24%20at%2020.18.46.jpeg' alt='Featured Collection' />
           </div>
         </section>
 
         <!-- 9. CUSTOMER REVIEWS -->
-        <section class="so-section" style="background: var(--linen);">
-          <div class="so-section-header">
+        <section class='so-section'>
+          <div class='so-section-header'>
+            <span class='so-section-kicker'>Testimonials</span>
             <h2>What Our Customers Say ❤️</h2>
-            <p>Loved by Natural Beauty Lovers</p>
+            <div class='so-divider'></div>
           </div>
-          <div class="so-reviews-grid">
-            <div class="so-review-card">
-              <div class="so-stars">★★★★★</div>
-              <p>“Beautiful packaging and lovely herbal fragrance. Really happy with the product.”</p>
-            </div>
-            <div class="so-review-card">
-              <div class="so-stars">★★★★★</div>
-              <p>“Feels natural and thoughtfully made.”</p>
-            </div>
-            <div class="so-review-card">
-              <div class="so-stars">★★★★★</div>
-              <p>“Good quality and beautifully packed.”</p>
-            </div>
+          <div class='so-reviews-grid'>
+            <div class='so-review-card'><div class='so-stars'>★★★★★</div><p>&quot;Beautiful packaging and lovely herbal fragrance. Really happy with the product.&quot;</p><div class='so-reviewer'>— Neha S.</div></div>
+            <div class='so-review-card'><div class='so-stars'>★★★★★</div><p>&quot;Feels natural and thoughtfully made. My skin loves it!&quot;</p><div class='so-reviewer'>— Priya M.</div></div>
+            <div class='so-review-card'><div class='so-stars'>★★★★★</div><p>&quot;Good quality and beautifully packed. Will order again.&quot;</p><div class='so-reviewer'>— Ritu K.</div></div>
           </div>
         </section>
 
         <!-- 10. INSTAGRAM -->
-        <section class="so-section">
-          <div class="so-section-header">
+        <section class='so-section' style='background:var(--linen);'>
+          <div class='so-section-header'>
+            <span class='so-section-kicker'>@ShrishtiOrganic</span>
             <h2>Follow Our Natural Journey 🌿</h2>
-            <p>@ShrishtiOrganic</p>
+            <div class='so-divider'></div>
           </div>
-          <div class="so-instagram-grid">
-            <img src="/assets/WhatsApp%20Image%202026-08-24%20at%2020.18.46.jpeg" alt="Insta 1" />
-            <img src="/assets/WhatsApp%20Image%202026-08-24%20at%2020.18.48(1).jpeg" alt="Insta 2" />
-            <img src="/assets/WhatsApp%20Image%202026-08-24%20at%2020.18.48.jpeg" alt="Insta 3" />
-            <img src="/assets/WhatsApp%20Image%202026-08-24%20at%2020.18.50.jpeg" alt="Insta 4" />
-            <img src="/assets/WhatsApp%20Image%202026-08-24%20at%2020.18.51.jpeg" alt="Insta 5" />
-            <img src="/assets/WhatsApp%20Image%202026-08-24%20at%2020.18.53.jpeg" alt="Insta 6" />
+          <div class='so-instagram-grid'>
+            <div class='so-instagram-item'><img src='/assets/WhatsApp%20Image%202026-08-24%20at%2020.18.46.jpeg' alt='Instagram 1' /></div>
+            <div class='so-instagram-item'><img src='/assets/WhatsApp%20Image%202026-08-24%20at%2020.18.46(1).jpeg' alt='Instagram 2' /></div>
+            <div class='so-instagram-item'><img src='/assets/WhatsApp%20Image%202026-08-24%20at%2020.18.48.jpeg' alt='Instagram 3' /></div>
+            <div class='so-instagram-item'><img src='/assets/WhatsApp%20Image%202026-08-24%20at%2020.18.50.jpeg' alt='Instagram 4' /></div>
+            <div class='so-instagram-item'><img src='/assets/WhatsApp%20Image%202026-08-24%20at%2020.18.51.jpeg' alt='Instagram 5' /></div>
+            <div class='so-instagram-item'><img src='/assets/WhatsApp%20Image%202026-08-24%20at%2020.18.53.jpeg' alt='Instagram 6' /></div>
           </div>
-          <div class="so-btn-container">
-            <a href="#" class="so-btn so-btn-secondary">Follow Us On Instagram</a>
-          </div>
+          <div class='so-btn-container'><a href='#' class='so-btn so-btn-secondary'>Follow Us On Instagram</a></div>
         </section>
 
         <!-- 11. NEWSLETTER -->
-        <section class="so-newsletter">
+        <section class='so-newsletter'>
           <h2>Get 10% OFF on Your First Order</h2>
           <p>Join the Shrishti Organic family and discover our natural care collection.</p>
-          <form onsubmit="event.preventDefault();">
-            <input type="email" placeholder="Enter your email" required />
-            <button type="submit" class="so-btn so-btn-primary" style="background: var(--sun); color: var(--forest); border: none;">Get My Offer</button>
+          <form class='so-newsletter-form' onsubmit='event.preventDefault();'>
+            <input type='email' placeholder='Enter your email address' required />
+            <button type='submit'>Get My Offer</button>
           </form>
-          <p style="font-size: 11px; margin-top: 15px; opacity: 0.8;">No spam. Only new launches, offers & natural beauty tips.</p>
+          <p class='so-newsletter-note'>No spam. Only new launches, offers &amp; natural beauty tips.</p>
         </section>
       </main>
 
       <!-- 12. FOOTER -->
-      <footer class="so-footer">
-        <div class="so-footer-grid">
-          <div class="so-footer-col">
-            <div class="brand" style="align-items: flex-start; text-align: left; margin-bottom: 20px; color: var(--sun);">
-              <span class="brand-mark">SHRISHTI</span>
-              <div class="brand-sub">
-                <span class="brand-line" style="background: var(--sun);"></span>
-                <span class="brand-organic" style="color: var(--white);">ORGANIC</span>
-                <span class="brand-line" style="background: var(--sun);"></span>
-              </div>
+      <footer class='so-footer'>
+        <div class='so-footer-grid'>
+          <div class='so-footer-col'>
+            <div class='brand' style='margin-bottom:20px;text-align:left;align-items:flex-start;'>
+              <span class='brand-mark' style='color:var(--sun);'>SHRISHTI</span>
+              <div class='brand-sub'><span class='brand-line' style='background:var(--sun);'></span><span class='brand-organic' style='color:#fff;'>ORGANIC</span><span class='brand-line' style='background:var(--sun);'></span></div>
             </div>
-            <p style="font-size: 13px; opacity: 0.8;">Pure Nature • Authentic Herbal Care • Handmade with Love</p>
+            <p>Pure Nature • Authentic Herbal Care • Handmade with Love</p>
           </div>
-          <div class="so-footer-col">
-            <h4>Quick Links</h4>
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#shop">Shop</a></li>
-              <li><a href="#our-story">About Us</a></li>
-              <li><a href="#">Our Ingredients</a></li>
-              <li><a href="#">FAQs</a></li>
-            </ul>
-          </div>
-          <div class="so-footer-col">
-            <h4>Shop</h4>
-            <ul>
-              <li><a href="#shop">Herbal Soaps</a></li>
-              <li><a href="#shop">Face Care</a></li>
-              <li><a href="#shop">Hair Care</a></li>
-              <li><a href="#shop">Herbal Powders</a></li>
-              <li><a href="#shop">Body Care</a></li>
-              <li><a href="#shop">Candles</a></li>
-            </ul>
-          </div>
-          <div class="so-footer-col">
-            <h4>Customer Care</h4>
-            <ul>
-              <li><a href="#">Shipping Policy</a></li>
-              <li><a href="#">Return & Refund Policy</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Terms & Conditions</a></li>
-            </ul>
-          </div>
+          <div class='so-footer-col'><h4>Quick Links</h4><ul><li><a href='#'>Home</a></li><li><a href='#shop'>Shop</a></li><li><a href='#our-story'>About Us</a></li><li><a href='#'>Our Ingredients</a></li><li><a href='#'>FAQs</a></li></ul></div>
+          <div class='so-footer-col'><h4>Shop by Category</h4><ul><li><a href='#shop'>Herbal Soaps</a></li><li><a href='#shop'>Face Care</a></li><li><a href='#shop'>Hair Care</a></li><li><a href='#shop'>Herbal Powders</a></li><li><a href='#shop'>Candles</a></li></ul></div>
+          <div class='so-footer-col'><h4>Customer Care</h4><ul><li><a href='#'>Shipping Policy</a></li><li><a href='#'>Return &amp; Refund Policy</a></li><li><a href='#'>Privacy Policy</a></li><li><a href='#'>Terms &amp; Conditions</a></li></ul></div>
         </div>
-        <div class="so-footer-bottom">
-          &copy; ${new Date().getFullYear()} Shrishti Organic. All rights reserved.
+        <div class='so-footer-bottom'>
+          <span>&copy; ${new Date().getFullYear()} Shrishti Organic. All Rights Reserved.</span>
+          <span style='color:rgba(255,255,255,0.3);'>🌿</span>
         </div>
       </footer>
     </div>
