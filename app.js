@@ -204,83 +204,309 @@ function renderStorefront() {
       </header>
 
       <main id="main-content">
-        <section class="hero" aria-labelledby="hero-title">
-          <div class="hero-media"><img src="${escapeHtml(heroImage)}" alt="" /></div>
-          <div class="container hero-content">
-            <p class="eyebrow">Thoughtfully made in small batches</p>
-            <h1 id="hero-title">${escapeHtml(heroTitle)}</h1>
-            <p class="hero-copy">${escapeHtml(heroSubtitle)}</p>
-            <div class="button-row">
-              <a class="primary-button" href="${escapeHtml(heroCtaUrl)}">${escapeHtml(heroCtaLabel)} <i data-lucide="arrow-up-right"></i></a>
-              <a class="secondary-button" href="#our-story">Our approach</a>
+        <!-- 1. HERO SECTION -->
+        <section class="so-hero">
+          <div class="so-hero-overlay"></div>
+          <div class="so-hero-content">
+            <h1>Bring the Goodness of Nature to Your Everyday Care</h1>
+            <p>Natural & herbal products made with carefully selected botanical ingredients, inspired by traditional Indian wellness.</p>
+            <div style="display: flex; justify-content: center; gap: 15px;">
+              <a href="#shop" class="so-btn so-btn-primary">🛍️ Shop Now</a>
+              <a href="#collections" class="so-btn so-btn-secondary">🌿 Explore Our Collection</a>
             </div>
           </div>
-          <div class="hero-footer"><span>Plant-led ingredients</span><span>Since 2026</span></div>
-        </section>
-
-        <section class="section" id="collections">
-          <div class="container">
-            <div class="section-heading">
-              <div>
-                <span class="section-kicker">Choose your ritual</span>
-                <h2>Care for every part of your day.</h2>
-              </div>
-              <p class="section-copy">Each collection is managed in real time by the Shrishti Organic team.</p>
-            </div>
-            ${renderCategoryStrip(categories)}
+          <div class="so-hero-trust">
+            <span>🌿 Herbal Ingredients</span>
+            <span>🤲 Handmade with Care</span>
+            <span>💚 Nature Inspired</span>
+            <span>✨ Small Batch</span>
           </div>
         </section>
 
-        <section class="section" id="shop">
-          <div class="container">
-            <div class="section-heading">
-              <div>
-                <span class="section-kicker">The shop</span>
-                <h2>Find your everyday botanical.</h2>
-              </div>
-              <p class="section-copy">Freshly published products appear here as soon as the team makes them available.</p>
+        <!-- 2. SHOP BY CATEGORY -->
+        <section class="so-section" id="collections">
+          <div class="so-section-header">
+            <h2>Discover Your Natural Care</h2>
+            <p>Shop by Category</p>
+          </div>
+          <div class="so-category-grid">
+            <div class="so-category-card">
+              <h3>Herbal Soaps</h3>
+              <p>Gentle everyday cleansing with botanical ingredients.</p>
             </div>
-            <form class="catalog-controls" id="catalog-filter-form">
-              <label class="field-shell">
-                <i data-lucide="search"></i>
-                <input id="catalog-search" name="search" value="${escapeHtml(state.filters.query)}" placeholder="Search products" autocomplete="off" />
-              </label>
-              <label class="select-shell">
-                <i data-lucide="leaf"></i>
-                <select id="catalog-category" name="category" aria-label="Filter products by collection">
-                  <option value="">All collections</option>
-                  ${categories.map((category) => `<option value="${escapeHtml(category.slug)}" ${state.filters.category === category.slug ? "selected" : ""}>${escapeHtml(category.name)}</option>`).join("")}
-                </select>
-              </label>
-              <label class="select-shell">
-                <i data-lucide="arrow-down-up"></i>
-                <select id="catalog-sort" name="sort" aria-label="Sort products">
-                  <option value="newest" ${state.filters.sort === "newest" ? "selected" : ""}>Newest</option>
-                  <option value="featured" ${state.filters.sort === "featured" ? "selected" : ""}>Featured</option>
-                  <option value="price-asc" ${state.filters.sort === "price-asc" ? "selected" : ""}>Price: low to high</option>
-                  <option value="price-desc" ${state.filters.sort === "price-desc" ? "selected" : ""}>Price: high to low</option>
-                </select>
-              </label>
-            </form>
-            ${products.length ? `<div class="product-grid">${products.map(renderProductCard).join("")}</div>` : renderPublicEmptyState()}
+            <div class="so-category-card">
+              <h3>Face & Skin Care</h3>
+              <p>Natural powders, face washes, masks & scrubs.</p>
+            </div>
+            <div class="so-category-card">
+              <h3>Hair Care</h3>
+              <p>Herbal powders, oils & natural hair care essentials.</p>
+            </div>
+            <div class="so-category-card">
+              <h3>Herbal Powders</h3>
+              <p>Traditional herbs for your daily beauty rituals.</p>
+            </div>
+            <div class="so-category-card">
+              <h3>Body Care</h3>
+              <p>Natural care for a refreshing bathing experience.</p>
+            </div>
+            <div class="so-category-card">
+              <h3>Natural Candles</h3>
+              <p>Handcrafted candles for a warm & beautiful ambience.</p>
+            </div>
+          </div>
+          <div class="so-btn-container">
+            <a href="#shop" class="so-btn so-btn-primary">View All Products</a>
           </div>
         </section>
 
-        <section class="story-band" id="our-story">
-          <div class="container story-content">
-            <h2>Simple ingredients. Considered care.</h2>
-            <p>We believe a daily care ritual should feel grounded, sensory, and clear. Shrishti Organic brings together botanical ingredients and a slower, more intentional approach to the products you reach for most.</p>
+        <!-- 3. BEST SELLERS (dynamic catalog) -->
+        <section class="so-section" id="shop">
+          <div class="so-section-header">
+            <h2>Loved by Our Customers ❤️</h2>
+            <p>Best Sellers</p>
           </div>
+          ${products.length ? `<div class="so-bestsellers-grid">${products.slice(0, 4).map(renderProductCard).join("")}</div>` : renderPublicEmptyState()}
+        </section>
+
+        <!-- 4. OUR NATURAL INGREDIENTS -->
+        <section class="so-section">
+          <div class="so-section-header">
+            <h2>Nature's Finest Ingredients 🌿</h2>
+            <p>Inspired by Nature. Rooted in Tradition.</p>
+          </div>
+          <div class="so-ingredient-grid">
+            <div class="so-ingredient">
+              <img src="https://images.unsplash.com/photo-1611079830811-865ff4428d17?q=80&w=200&auto=format&fit=crop" alt="Manjishtha" />
+              <span>Manjishtha</span>
+            </div>
+            <div class="so-ingredient">
+              <img src="https://images.unsplash.com/photo-1599839619722-39751411ea63?q=80&w=200&auto=format&fit=crop" alt="Mulethi" />
+              <span>Mulethi</span>
+            </div>
+            <div class="so-ingredient">
+              <img src="https://images.unsplash.com/photo-1628189689917-88f6b2f6b86e?q=80&w=200&auto=format&fit=crop" alt="Neem" />
+              <span>Neem</span>
+            </div>
+            <div class="so-ingredient">
+              <img src="https://images.unsplash.com/photo-1577931341113-43f1cb10f059?q=80&w=200&auto=format&fit=crop" alt="Amla" />
+              <span>Amla</span>
+            </div>
+            <div class="so-ingredient">
+              <img src="https://images.unsplash.com/photo-1616147458694-811c7ce6c278?q=80&w=200&auto=format&fit=crop" alt="Shikakai" />
+              <span>Shikakai</span>
+            </div>
+            <div class="so-ingredient">
+              <img src="https://images.unsplash.com/photo-1591557008127-142c6742a0b1?q=80&w=200&auto=format&fit=crop" alt="Hibiscus" />
+              <span>Hibiscus</span>
+            </div>
+            <div class="so-ingredient">
+              <img src="https://images.unsplash.com/photo-1571587522513-f6617dd9faee?q=80&w=200&auto=format&fit=crop" alt="Moringa" />
+              <span>Moringa</span>
+            </div>
+            <div class="so-ingredient">
+              <img src="https://images.unsplash.com/photo-1596541571217-023e3e2ec8b4?q=80&w=200&auto=format&fit=crop" alt="Orange Peel" />
+              <span>Orange Peel</span>
+            </div>
+            <div class="so-ingredient">
+              <img src="https://images.unsplash.com/photo-1621251368940-bf7f941f1737?q=80&w=200&auto=format&fit=crop" alt="Sandalwood" />
+              <span>Sandalwood</span>
+            </div>
+          </div>
+          <div style="max-width: 800px; margin: 0 auto; text-align: center; color: var(--ink);">
+            <p>At Shrishti Organic, we believe that everyday personal care can be simple, thoughtful and closer to nature. We carefully select herbal and botanical ingredients for our products and prepare them with care.</p>
+            <div class="so-btn-container">
+              <a href="#shop" class="so-btn so-btn-secondary">Explore Ingredients</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- 5. WHY SHRISHTI ORGANIC? -->
+        <section class="so-section" style="background: var(--linen);">
+          <div class="so-section-header">
+            <h2>Why Choose Shrishti Organic?</h2>
+          </div>
+          <div class="so-features-grid">
+            <div class="so-feature">
+              <div class="so-feature-icon">🌿</div>
+              <h3>Herbal Ingredients</h3>
+              <p>Carefully selected botanical ingredients.</p>
+            </div>
+            <div class="so-feature">
+              <div class="so-feature-icon">🤲</div>
+              <h3>Handcrafted with Care</h3>
+              <p>Made with attention to every batch.</p>
+            </div>
+            <div class="so-feature">
+              <div class="so-feature-icon">🌱</div>
+              <h3>Nature Inspired</h3>
+              <p>Inspired by traditional Indian herbal beauty rituals.</p>
+            </div>
+            <div class="so-feature">
+              <div class="so-feature-icon">🔍</div>
+              <h3>Thoughtfully Made</h3>
+              <p>Simple, transparent and carefully prepared products.</p>
+            </div>
+            <div class="so-feature">
+              <div class="so-feature-icon">❤️</div>
+              <h3>Made with Love</h3>
+              <p>Created for everyday self-care and family wellness.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 6. BRAND STORY -->
+        <section class="so-section" id="our-story">
+          <div class="so-story-split">
+            <img class="so-story-img" src="https://images.unsplash.com/photo-1615397323136-1e3df6a17b2b?q=80&w=1000&auto=format&fit=crop" alt="Making process" />
+            <div class="so-story-text">
+              <p style="text-transform: uppercase; letter-spacing: 0.1em; color: var(--sun); font-size: 12px; margin-bottom: 10px;">From Nature to Your Home</p>
+              <h2>"We believe beauty begins with nature."</h2>
+              <p>Shrishti Organic is a homegrown natural care brand inspired by the traditional goodness of Indian herbs and botanical ingredients.</p>
+              <p>From herbal soaps and face care to hair care and natural powders, every product is created with care to bring the simple goodness of nature into your daily routine.</p>
+              <a href="#" class="so-btn so-btn-primary" style="margin-top: 15px;">Our Story</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- 7. HERBAL RITUAL -->
+        <section class="so-section">
+          <div class="so-section-header">
+            <h2>Create Your Everyday Herbal Ritual 🌿</h2>
+          </div>
+          <div class="so-ritual-steps">
+            <div class="so-step">
+              <div class="so-step-number">01</div>
+              <h3>CHOOSE</h3>
+              <p>Choose the herbal ingredients your skin & hair love.</p>
+            </div>
+            <div class="so-step-arrow">→</div>
+            <div class="so-step">
+              <div class="so-step-number">02</div>
+              <h3>USE</h3>
+              <p>Make them a simple part of your everyday self-care ritual.</p>
+            </div>
+            <div class="so-step-arrow">→</div>
+            <div class="so-step">
+              <div class="so-step-number">03</div>
+              <h3>ENJOY</h3>
+              <p>Enjoy a naturally inspired, refreshing self-care experience.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 8. FEATURED COLLECTION -->
+        <section class="so-featured-banner">
+          <div class="so-featured-content">
+            <p style="text-transform: uppercase; letter-spacing: 0.1em; font-size: 12px; margin-bottom: 10px; color: var(--sun);">Explore Our Herbal Collection</p>
+            <h2>Traditional Herbal Goodness for Modern Everyday Care</h2>
+            <div style="display: flex; justify-content: center; gap: 15px;">
+              <a href="#shop" class="so-btn so-btn-light">Shop Skin Care</a>
+              <a href="#shop" class="so-btn so-btn-light">Shop Hair Care</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- 9. CUSTOMER REVIEWS -->
+        <section class="so-section" style="background: var(--linen);">
+          <div class="so-section-header">
+            <h2>What Our Customers Say ❤️</h2>
+            <p>Loved by Natural Beauty Lovers</p>
+          </div>
+          <div class="so-reviews-grid">
+            <div class="so-review-card">
+              <div class="so-stars">★★★★★</div>
+              <p>“Beautiful packaging and lovely herbal fragrance. Really happy with the product.”</p>
+            </div>
+            <div class="so-review-card">
+              <div class="so-stars">★★★★★</div>
+              <p>“Feels natural and thoughtfully made.”</p>
+            </div>
+            <div class="so-review-card">
+              <div class="so-stars">★★★★★</div>
+              <p>“Good quality and beautifully packed.”</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 10. INSTAGRAM -->
+        <section class="so-section">
+          <div class="so-section-header">
+            <h2>Follow Our Natural Journey 🌿</h2>
+            <p>@ShrishtiOrganic</p>
+          </div>
+          <div class="so-instagram-grid">
+            <img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?q=80&w=400&auto=format&fit=crop" alt="Insta 1" />
+            <img src="https://images.unsplash.com/photo-1615397323136-1e3df6a17b2b?q=80&w=400&auto=format&fit=crop" alt="Insta 2" />
+            <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=400&auto=format&fit=crop" alt="Insta 3" />
+            <img src="https://images.unsplash.com/photo-1611079830811-865ff4428d17?q=80&w=400&auto=format&fit=crop" alt="Insta 4" />
+            <img src="https://images.unsplash.com/photo-1628189689917-88f6b2f6b86e?q=80&w=400&auto=format&fit=crop" alt="Insta 5" />
+            <img src="https://images.unsplash.com/photo-1599839619722-39751411ea63?q=80&w=400&auto=format&fit=crop" alt="Insta 6" />
+          </div>
+          <div class="so-btn-container">
+            <a href="#" class="so-btn so-btn-secondary">Follow Us On Instagram</a>
+          </div>
+        </section>
+
+        <!-- 11. NEWSLETTER -->
+        <section class="so-newsletter">
+          <h2>Get 10% OFF on Your First Order</h2>
+          <p>Join the Shrishti Organic family and discover our natural care collection.</p>
+          <form onsubmit="event.preventDefault();">
+            <input type="email" placeholder="Enter your email" required />
+            <button type="submit" class="so-btn so-btn-primary" style="background: var(--sun); color: var(--forest); border: none;">Get My Offer</button>
+          </form>
+          <p style="font-size: 11px; margin-top: 15px; opacity: 0.8;">No spam. Only new launches, offers & natural beauty tips.</p>
         </section>
       </main>
 
-      <footer class="footer">
-        <div class="container footer-grid">
-          <div>
-            <div class="brand footer-brand"><span class="brand-mark">${escapeHtml(settings.storeName)}</span><span class="brand-tag">Botanical rituals</span></div>
+      <!-- 12. FOOTER -->
+      <footer class="so-footer">
+        <div class="so-footer-grid">
+          <div class="so-footer-col">
+            <div class="brand" style="align-items: flex-start; text-align: left; margin-bottom: 20px; color: var(--sun);">
+              <span class="brand-mark">SHRISHTI</span>
+              <div class="brand-sub">
+                <span class="brand-line" style="background: var(--sun);"></span>
+                <span class="brand-organic" style="color: var(--white);">ORGANIC</span>
+                <span class="brand-line" style="background: var(--sun);"></span>
+              </div>
+            </div>
+            <p style="font-size: 13px; opacity: 0.8;">Pure Nature • Authentic Herbal Care • Handmade with Love</p>
           </div>
-          <div><h3 class="footer-title">Explore</h3><div class="footer-links"><a href="#shop">Shop all</a><a href="#collections">Collections</a><a href="#our-story">Our story</a></div></div>
-          <div><h3 class="footer-title">Checkout</h3><div class="footer-links"><p>Secure online payments and cash on delivery.</p><p>Orders are protected by account sign-in.</p></div></div>
+          <div class="so-footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#shop">Shop</a></li>
+              <li><a href="#our-story">About Us</a></li>
+              <li><a href="#">Our Ingredients</a></li>
+              <li><a href="#">FAQs</a></li>
+            </ul>
+          </div>
+          <div class="so-footer-col">
+            <h4>Shop</h4>
+            <ul>
+              <li><a href="#shop">Herbal Soaps</a></li>
+              <li><a href="#shop">Face Care</a></li>
+              <li><a href="#shop">Hair Care</a></li>
+              <li><a href="#shop">Herbal Powders</a></li>
+              <li><a href="#shop">Body Care</a></li>
+              <li><a href="#shop">Candles</a></li>
+            </ul>
+          </div>
+          <div class="so-footer-col">
+            <h4>Customer Care</h4>
+            <ul>
+              <li><a href="#">Shipping Policy</a></li>
+              <li><a href="#">Return & Refund Policy</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="so-footer-bottom">
+          &copy; ${new Date().getFullYear()} Shrishti Organic. All rights reserved.
         </div>
       </footer>
     </div>

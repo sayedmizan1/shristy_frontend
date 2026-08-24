@@ -1,0 +1,457 @@
+/* Shrishti Organic - Custom 12-Section Homepage Styles */
+
+/* 1. HERO SECTION */
+.so-hero {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--paper);
+  background-image: url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=2000&auto=format&fit=crop'); /* Soft leaves/sunlight placeholder */
+  background-size: cover;
+  background-position: center;
+  color: var(--forest);
+  padding: 100px 20px;
+}
+.so-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(253,251,247,0.8), rgba(253,251,247,0.4));
+  z-index: 1;
+}
+.so-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+.so-hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(40px, 6vw, 64px);
+  margin-bottom: 20px;
+  line-height: 1.1;
+  color: var(--forest);
+}
+.so-hero p {
+  font-size: 18px;
+  margin-bottom: 40px;
+  color: var(--ink);
+}
+.so-hero-trust {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(253,251,247,0.9);
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  z-index: 2;
+  border-top: 1px solid var(--sun);
+}
+.so-hero-trust span {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--forest);
+}
+
+/* 2. CATEGORIES */
+.so-section {
+  padding: 80px 4vw;
+  background: var(--paper);
+}
+.so-section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.so-section-header h2 {
+  font-family: var(--serif);
+  font-size: 36px;
+  color: var(--forest);
+  margin-bottom: 10px;
+}
+.so-section-header p {
+  color: var(--sun);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 12px;
+  font-weight: 600;
+}
+.so-category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+.so-category-card {
+  background: var(--white);
+  border: 1px solid var(--sun);
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.so-category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+.so-category-card h3 {
+  font-family: var(--serif);
+  color: var(--forest);
+  margin: 15px 0 10px;
+}
+.so-category-card p {
+  font-size: 14px;
+  color: var(--ink);
+}
+.so-btn-container {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* 3. BEST SELLERS */
+.so-bestsellers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.so-product-card {
+  background: var(--white);
+  border: 1px solid var(--sun);
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.so-product-card:hover {
+  transform: translateY(-5px);
+}
+.so-product-image {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  background: var(--linen);
+}
+.so-product-info {
+  padding: 20px;
+}
+.so-product-info h3 {
+  font-family: var(--serif);
+  color: var(--forest);
+  margin-bottom: 5px;
+}
+.so-product-info p {
+  font-size: 13px;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+.so-stars {
+  color: var(--sun);
+  margin-bottom: 10px;
+}
+.so-price {
+  font-weight: bold;
+  color: var(--forest);
+  margin-bottom: 15px;
+  display: block;
+}
+
+/* 4. INGREDIENTS */
+.so-ingredient-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto 40px;
+}
+.so-ingredient {
+  text-align: center;
+}
+.so-ingredient img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 10px;
+  border: 2px solid var(--sun);
+}
+.so-ingredient span {
+  font-family: var(--serif);
+  color: var(--forest);
+}
+
+/* 5. WHY US */
+.so-features-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.so-feature {
+  text-align: center;
+  max-width: 200px;
+}
+.so-feature-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid var(--leaf);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  font-size: 32px;
+}
+.so-feature h3 {
+  font-family: var(--serif);
+  color: var(--forest);
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.so-feature p {
+  font-size: 14px;
+  color: var(--ink);
+}
+
+/* 6. BRAND STORY */
+.so-story-split {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  align-items: center;
+}
+.so-story-img {
+  flex: 1 1 400px;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+.so-story-text {
+  flex: 1 1 400px;
+}
+.so-story-text h2 {
+  font-family: var(--serif);
+  color: var(--forest);
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+.so-story-text p {
+  color: var(--ink);
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* 7. HERBAL RITUAL */
+.so-ritual-steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  gap: 20px;
+}
+.so-step {
+  text-align: center;
+  flex: 1;
+}
+.so-step-number {
+  font-family: var(--serif);
+  font-size: 40px;
+  color: var(--sun);
+  margin-bottom: 10px;
+}
+.so-step h3 {
+  font-family: var(--serif);
+  color: var(--forest);
+  margin-bottom: 10px;
+}
+.so-step p {
+  font-size: 14px;
+  color: var(--ink);
+}
+.so-step-arrow {
+  color: var(--leaf);
+  font-size: 24px;
+}
+
+/* 8. FEATURED BANNER */
+.so-featured-banner {
+  background-image: url('https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?q=80&w=2000&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+  text-align: center;
+  color: var(--white);
+  position: relative;
+}
+.so-featured-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(27, 58, 40, 0.6); /* forest green overlay */
+}
+.so-featured-content {
+  position: relative;
+  z-index: 2;
+}
+.so-featured-content h2 {
+  font-family: var(--serif);
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+/* 9. REVIEWS */
+.so-reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+.so-review-card {
+  background: var(--white);
+  border: 1px solid var(--linen);
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+.so-review-card p {
+  font-style: italic;
+  color: var(--ink);
+  margin-bottom: 15px;
+}
+
+/* 10. INSTAGRAM */
+.so-instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-top: 30px;
+}
+.so-instagram-grid img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* 11. NEWSLETTER */
+.so-newsletter {
+  background: var(--leaf);
+  color: var(--white);
+  text-align: center;
+  padding: 80px 20px;
+}
+.so-newsletter h2 {
+  font-family: var(--serif);
+  margin-bottom: 15px;
+  color: var(--white);
+}
+.so-newsletter form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.so-newsletter input {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  flex: 1;
+}
+
+/* 12. FOOTER */
+.so-footer {
+  background: var(--forest);
+  color: var(--white);
+  padding: 80px 4vw 40px;
+}
+.so-footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  margin-bottom: 60px;
+}
+.so-footer-col h4 {
+  font-family: var(--serif);
+  color: var(--sun);
+  margin-bottom: 20px;
+}
+.so-footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.so-footer-col li {
+  margin-bottom: 10px;
+}
+.so-footer-col a {
+  color: var(--moss);
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+.so-footer-col a:hover {
+  opacity: 1;
+  color: var(--white);
+}
+.so-footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 20px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.5);
+}
+
+/* Adjustments to default buttons */
+.so-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 12px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+.so-btn-primary {
+  background: var(--forest);
+  color: var(--white);
+  border: 1px solid var(--sun);
+}
+.so-btn-primary:hover {
+  background: var(--ink);
+  transform: translateY(-2px);
+}
+.so-btn-secondary {
+  background: transparent;
+  color: var(--forest);
+  border: 1px solid var(--forest);
+}
+.so-btn-secondary:hover {
+  background: var(--leaf);
+  color: var(--white);
+  border-color: var(--leaf);
+  transform: translateY(-2px);
+}
+.so-btn-light {
+  background: transparent;
+  color: var(--white);
+  border: 1px solid var(--white);
+}
+.so-btn-light:hover {
+  background: var(--white);
+  color: var(--forest);
+}
