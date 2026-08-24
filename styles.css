@@ -1,21 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap");
 
 :root {
-  --ink: #17251f;
-  --forest: #183c31;
-  --leaf: #527662;
-  --moss: #d9e3d2;
-  --paper: #fbf8ef;
-  --linen: #f0eadb;
-  --sun: #e6ae3d;
-  --rose: #c95b50;
-  --clay: #b85e3d;
-  --white: #fffdf8;
-  --muted: #68716b;
-  --line: rgba(23, 37, 31, 0.14);
-  --soft-line: rgba(23, 37, 31, 0.08);
-  --shadow: 0 16px 42px rgba(23, 37, 31, 0.12);
-  --serif: "Fraunces", Georgia, serif;
+  --ink: #1B3A28; /* Deep Forest Green */
+  --forest: #1a3224; 
+  --leaf: #2f563d;
+  --moss: #e8eade;
+  --paper: #fdfbf7; /* Cream/Off-white */
+  --linen: #f4f0e6;
+  --sun: #C5A059; /* Gold */
+  --rose: #b54a40;
+  --clay: #8e4428;
+  --white: #ffffff;
+  --muted: #858b87;
+  --line: rgba(197, 160, 89, 0.4); /* Gold line */
+  --soft-line: rgba(197, 160, 89, 0.15);
+  --shadow: 0 16px 42px rgba(27, 58, 40, 0.08);
+  --serif: "Cinzel", "Fraunces", Georgia, serif;
   --sans: "Manrope", sans-serif;
   --mono: "DM Mono", monospace;
 }
@@ -34,8 +34,6 @@ body {
   margin: 0;
   color: var(--ink);
   background-color: var(--paper);
-  background-image: linear-gradient(90deg, rgba(24, 60, 49, 0.025) 1px, transparent 1px), linear-gradient(rgba(24, 60, 49, 0.025) 1px, transparent 1px);
-  background-size: 26px 26px;
   font-family: var(--sans);
   font-size: 15px;
   line-height: 1.5;
@@ -162,26 +160,83 @@ svg {
 
 .brand {
   position: relative;
-  display: grid;
-  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   color: var(--forest);
   line-height: 1;
+  text-align: center;
+  gap: 2px;
+}
+
+.brand-s-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid var(--sun);
+  margin-bottom: 4px;
+}
+
+.brand-s-inner {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--serif);
+  font-size: 26px;
+  color: var(--sun);
+}
+
+.s-leaf {
+  font-size: 14px;
+  color: var(--leaf);
+}
+
+.s-letter {
+  font-weight: 400;
+  transform: translateY(2px);
 }
 
 .brand-mark {
   font-family: var(--serif);
-  font-size: 24px;
-  font-weight: 700;
-  letter-spacing: 0;
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.brand-sub {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.brand-line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: var(--ink);
+  opacity: 0.8;
+}
+
+.brand-organic {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
 }
 
 .brand-tag {
   margin-top: 4px;
-  font-family: var(--mono);
-  font-size: 8px;
-  font-weight: 500;
-  letter-spacing: 0.18em;
+  font-family: var(--sans);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
+  color: var(--leaf);
 }
 
 .icon-button {
@@ -346,12 +401,14 @@ svg {
 
 .primary-button {
   color: var(--white);
-  background: var(--forest);
+  background: var(--ink);
+  border: 1px solid var(--sun);
 }
 
 .hero .primary-button {
-  color: var(--forest);
+  color: var(--ink);
   background: var(--sun);
+  border: 1px solid var(--sun);
 }
 
 .primary-button:hover,
@@ -361,13 +418,13 @@ svg {
 }
 
 .secondary-button {
-  border-color: var(--line);
-  color: var(--forest);
+  border-color: var(--sun);
+  color: var(--ink);
   background: var(--white);
 }
 
 .secondary-button:hover {
-  border-color: var(--forest);
+  border-color: var(--ink);
   background: var(--moss);
 }
 
@@ -471,15 +528,15 @@ svg {
   align-items: center;
   gap: 9px;
   padding: 0 13px;
-  border: 1px solid var(--line);
+  border: 1px solid var(--sun);
   border-radius: 4px;
   background: var(--white);
 }
 
 .field-shell:focus-within,
 .select-shell:focus-within {
-  border-color: var(--forest);
-  box-shadow: 0 0 0 3px rgba(82, 118, 98, 0.14);
+  border-color: var(--ink);
+  box-shadow: 0 0 0 3px var(--soft-line);
 }
 
 .field-shell input,
@@ -507,7 +564,7 @@ svg {
   display: grid;
   min-width: 0;
   grid-template-rows: auto 1fr;
-  border: 1px solid var(--soft-line);
+  border: 1px solid var(--sun);
   border-radius: 4px;
   background: var(--white);
   overflow: hidden;

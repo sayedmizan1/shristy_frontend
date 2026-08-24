@@ -170,7 +170,7 @@ function renderStorefront() {
 
   appRoot.innerHTML = `
     <div class="site-shell">
-      <div class="announcement">${escapeHtml(settings.announcement || "Botanical care, made for your everyday rituals.")}</div>
+      <div class="announcement">${escapeHtml(settings.announcement || "Nature's touch, your beauty. 100% Natural products.")}</div>
       <header class="site-header">
         <nav class="header-nav" aria-label="Main navigation">
           <a class="nav-link" href="#shop">Shop</a>
@@ -178,8 +178,20 @@ function renderStorefront() {
           <a class="nav-link" href="#our-story">Our story</a>
         </nav>
         <a class="brand" href="#" aria-label="${escapeHtml(settings.storeName)} home">
-          <span class="brand-mark">${escapeHtml(settings.storeName)}</span>
-          <span class="brand-tag">Botanical rituals</span>
+          <div class="brand-s-logo">
+            <div class="brand-s-inner">
+              <span class="s-leaf left">🌿</span>
+              <span class="s-letter">S</span>
+              <span class="s-leaf right">🌿</span>
+            </div>
+          </div>
+          <span class="brand-mark">SHRISHTI</span>
+          <div class="brand-sub">
+            <span class="brand-line"></span>
+            <span class="brand-organic">ORGANIC</span>
+            <span class="brand-line"></span>
+          </div>
+          <span class="brand-tag">Nature's touch, your beauty</span>
         </a>
         <div class="header-actions">
           <button class="icon-button" type="button" data-action="open-account" aria-label="${state.customer ? `Open account for ${escapeHtml(state.customer.name)}` : "Sign in or create an account"}" title="${state.customer ? `Account: ${escapeHtml(state.customer.name)}` : "Sign in or create an account"}">
