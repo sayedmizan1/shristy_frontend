@@ -10,7 +10,7 @@
   align-items: center;
   text-align: center;
   background-color: var(--paper);
-  background-image: url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=2000&auto=format&fit=crop'); /* Soft leaves/sunlight placeholder */
+  background-image: url('/assets/hero.jpg');
   background-size: cover;
   background-position: center;
   color: var(--forest);
@@ -283,7 +283,7 @@
 
 /* 8. FEATURED BANNER */
 .so-featured-banner {
-  background-image: url('https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?q=80&w=2000&auto=format&fit=crop');
+  background-image: url('/assets/WhatsApp%20Image%202026-08-24%20at%2020.18.46.jpeg');
   background-size: cover;
   background-position: center;
   padding: 100px 20px;

@@ -277,39 +277,39 @@ function renderStorefront() {
           </div>
           <div class="so-ingredient-grid">
             <div class="so-ingredient">
-              <img src="https://images.unsplash.com/photo-1611079830811-865ff4428d17?q=80&w=200&auto=format&fit=crop" alt="Manjishtha" />
+              <img src="/assets/WhatsApp%20Image%202026-08-24%20at%2020.18.46(1).jpeg" alt="Manjishtha" />
               <span>Manjishtha</span>
             </div>
             <div class="so-ingredient">
-              <img src="https://images.unsplash.com/photo-1599839619722-39751411ea63?q=80&w=200&auto=format&fit=crop" alt="Mulethi" />
+              <img src="/assets/WhatsApp%20Image%202026-08-24%20at%2020.18.46.jpeg" alt="Mulethi" />
               <span>Mulethi</span>
             </div>
             <div class="so-ingredient">
-              <img src="https://images.unsplash.com/photo-1628189689917-88f6b2f6b86e?q=80&w=200&auto=format&fit=crop" alt="Neem" />
+              <img src="/assets/WhatsApp%20Image%202026-08-24%20at%2020.18.48(1).jpeg" alt="Neem" />
               <span>Neem</span>
             </div>
             <div class="so-ingredient">
-              <img src="https://images.unsplash.com/photo-1577931341113-43f1cb10f059?q=80&w=200&auto=format&fit=crop" alt="Amla" />
+              <img src="/assets/WhatsApp%20Image%202026-08-24%20at%2020.18.48.jpeg" alt="Amla" />
               <span>Amla</span>
             </div>
             <div class="so-ingredient">
-              <img src="https://images.unsplash.com/photo-1616147458694-811c7ce6c278?q=80&w=200&auto=format&fit=crop" alt="Shikakai" />
+              <img src="/assets/WhatsApp%20Image%202026-08-24%20at%2020.18.50.jpeg" alt="Shikakai" />
               <span>Shikakai</span>
             </div>
             <div class="so-ingredient">
-              <img src="https://images.unsplash.com/photo-1591557008127-142c6742a0b1?q=80&w=200&auto=format&fit=crop" alt="Hibiscus" />
+              <img src="/assets/WhatsApp%20Image%202026-08-24%20at%2020.18.51.jpeg" alt="Hibiscus" />
               <span>Hibiscus</span>
             </div>
             <div class="so-ingredient">
-              <img src="https://images.unsplash.com/photo-1571587522513-f6617dd9faee?q=80&w=200&auto=format&fit=crop" alt="Moringa" />
+              <img src="/assets/WhatsApp%20Image%202026-08-24%20at%2020.18.53.jpeg" alt="Moringa" />
               <span>Moringa</span>
             </div>
             <div class="so-ingredient">
-              <img src="https://images.unsplash.com/photo-1596541571217-023e3e2ec8b4?q=80&w=200&auto=format&fit=crop" alt="Orange Peel" />
+              <img src="/assets/WhatsApp%20Image%202026-08-24%20at%2020.52.09.jpeg" alt="Orange Peel" />
               <span>Orange Peel</span>
             </div>
             <div class="so-ingredient">
-              <img src="https://images.unsplash.com/photo-1621251368940-bf7f941f1737?q=80&w=200&auto=format&fit=crop" alt="Sandalwood" />
+              <img src="/assets/admin-hero.jpg" alt="Sandalwood" />
               <span>Sandalwood</span>
             </div>
           </div>
@@ -358,7 +358,7 @@ function renderStorefront() {
         <!-- 6. BRAND STORY -->
         <section class="so-section" id="our-story">
           <div class="so-story-split">
-            <img class="so-story-img" src="https://images.unsplash.com/photo-1615397323136-1e3df6a17b2b?q=80&w=1000&auto=format&fit=crop" alt="Making process" />
+            <img class="so-story-img" src="/assets/WhatsApp%20Image%202026-08-24%20at%2020.18.46(1).jpeg" alt="Making process" />
             <div class="so-story-text">
               <p style="text-transform: uppercase; letter-spacing: 0.1em; color: var(--sun); font-size: 12px; margin-bottom: 10px;">From Nature to Your Home</p>
               <h2>"We believe beauty begins with nature."</h2>
@@ -436,12 +436,12 @@ function renderStorefront() {
             <p>@ShrishtiOrganic</p>
           </div>
           <div class="so-instagram-grid">
-            <img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?q=80&w=400&auto=format&fit=crop" alt="Insta 1" />
-            <img src="https://images.unsplash.com/photo-1615397323136-1e3df6a17b2b?q=80&w=400&auto=format&fit=crop" alt="Insta 2" />
-            <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=400&auto=format&fit=crop" alt="Insta 3" />
-            <img src="https://images.unsplash.com/photo-1611079830811-865ff4428d17?q=80&w=400&auto=format&fit=crop" alt="Insta 4" />
-            <img src="https://images.unsplash.com/photo-1628189689917-88f6b2f6b86e?q=80&w=400&auto=format&fit=crop" alt="Insta 5" />
-            <img src="https://images.unsplash.com/photo-1599839619722-39751411ea63?q=80&w=400&auto=format&fit=crop" alt="Insta 6" />
+            <img src="/assets/WhatsApp%20Image%202026-08-24%20at%2020.18.46.jpeg" alt="Insta 1" />
+            <img src="/assets/WhatsApp%20Image%202026-08-24%20at%2020.18.48(1).jpeg" alt="Insta 2" />
+            <img src="/assets/WhatsApp%20Image%202026-08-24%20at%2020.18.48.jpeg" alt="Insta 3" />
+            <img src="/assets/WhatsApp%20Image%202026-08-24%20at%2020.18.50.jpeg" alt="Insta 4" />
+            <img src="/assets/WhatsApp%20Image%202026-08-24%20at%2020.18.51.jpeg" alt="Insta 5" />
+            <img src="/assets/WhatsApp%20Image%202026-08-24%20at%2020.18.53.jpeg" alt="Insta 6" />
           </div>
           <div class="so-btn-container">
             <a href="#" class="so-btn so-btn-secondary">Follow Us On Instagram</a>
