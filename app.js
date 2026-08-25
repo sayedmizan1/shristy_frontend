@@ -198,7 +198,7 @@ function renderStorefront() {
             ${cartQuantity() > 0 ? `<span class="so-cart-count">${cartQuantity()}</span>` : ''}
           </button>
         </div>
-        <button class="so-mobile-menu-btn" id="mobile-menu-toggle" type="button" aria-label="Open menu"><i data-lucide="menu"></i></button>
+        <button class="so-mobile-menu-btn" id="mobile-menu-toggle" type="button" data-action="toggle-mobile-menu" aria-label="Open menu"><i data-lucide="menu"></i></button>
       </header>
       <div class="so-mobile-nav" id="so-mobile-nav">
         <a class="so-mobile-nav-link" href="#">HOME</a>
@@ -570,6 +570,10 @@ function handleAppClick(event) {
   }
   if (action === "customer-logout") {
     logoutCustomer();
+  }
+  if (action === "toggle-mobile-menu") {
+    const nav = document.getElementById("so-mobile-nav");
+    if (nav) nav.classList.toggle("is-open");
   }
   if (action === "filter-category") {
     state.filters.category = target.dataset.category || "";
